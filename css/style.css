@@ -485,7 +485,11 @@ footer {
     background-color: var(--primary-color);
     color: white;
     padding: 4rem 2rem 1rem;
-    margin-top: 4rem;
+    margin-top: 0.2rem;
+    padding: 5rem 2rem;
+    background: linear-gradient(rgba(27, 54, 93, 0.95), rgba(0, 0, 0, 0.95)), 
+    url('https://images.unsplash.com/photo-1529333166437-7750a6dd5a70') center/cover;
+    color: white;
 }
 
 .footer-content {

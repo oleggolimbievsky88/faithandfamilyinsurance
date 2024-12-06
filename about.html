@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Faith & Family Insurance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="contact-info">
+                <a href="tel:9019615315">
+                    <i class="fas fa-phone"></i> (901) 961-5315
+                </a>
+                <a href="mailto:info@faithandfamilyinsurance.com">
+                    <i class="fas fa-envelope"></i> info@faithandfamilyinsurance.com
+                </a>
+            </div>
+            <div class="social-links">
+                <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo-container">
+            <div><img src="./logo_white.png" alt="" width="100px"></div>
+            <div class="logo-text">
+                Faith & Family<br>Insurance
+            </div>
+        </div>
+        <p>Protecting Your Family's Future with Faith-Based Values</p>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <div style="display: flex; align-items: center;">
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="mobile-logo">Faith & Family Insurance</div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="estimate.html">Estimate</a>
+                <a href="about.html" class="active">About</a>
+                <a href="faq.html" >FAQs</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="search-container">
+                <input type="search" placeholder="Search...">
+            </div>
+        </div>
+    </nav>
+
+    <div class="faq-container">
+        <div class="faq-intro">
+            <h1>About Us</h1>
+            <p>We are a team of dedicated professionals who are passionate about providing comprehensive insurance solutions to our clients. Our mission is to help you protect your family's future with the peace of mind that comes from knowing your loved ones are secure.</p>
+        </div>
+
+        <div class="faq-section">
+            <h2>Our Mission</h2>
+            <div class="faq-item">
+                <div class="faq-question">Our Mission</div>
+                <div class="faq-answer">
+                    Our mission is to help you protect your family's future with the peace of mind that comes from knowing your loved ones are secure.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Our Vision</div>
+                <div class="faq-answer">
+                    Our vision is to be the leading provider of insurance solutions that align with your faith-based values. We strive to be a trusted partner for your family's financial security.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Our Team</h2>
+            <div class="faq-item">
+                <div class="faq-question">Our Team</div>
+                <div class="faq-answer">
+                    Our team is comprised of experienced professionals who are dedicated to providing exceptional service and support to our clients.
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section-divider"></div>
+
+        <div class="faq-conclusion">
+            <p>We're here to help you make informed decisions about your life insurance needs.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="./logo_white.png" alt="Faith & Family Insurance" width="80px">
+                <h3>Faith & Family Insurance</h3>
+                <p>Protecting Your Family's Future with Faith-Based Values</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="estimate.html">Get a Quote</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> (901) 961-5315</li>
+                    <li><i class="fas fa-envelope"></i> info@faithandfamilyinsurance.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 5:00 PM</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Faith & Family Insurance. OG Web Services, LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            document.querySelector('.search-container').classList.toggle('active');
+            const hamburger = document.querySelector('.hamburger');
+            hamburger.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        }
+    </script>
+</body>
+</html> 

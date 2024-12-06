@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faith & Family Insurance - Life Insurance Solutions</title>
+    <title>FAQs - Faith & Family Insurance</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -29,8 +29,7 @@
 
     <header>
         <div class="logo-container">
-            <div>
-                <a href="index.html"><img src="./logo_white.png" alt="" width="100px"></div></a>
+            <div><img src="./logo_white.png" alt="" width="100px"></div>
             <div class="logo-text">
                 Faith & Family<br>Insurance
             </div>
@@ -49,11 +48,11 @@
                 <div class="mobile-logo">Faith & Family Insurance</div>
             </div>
             <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="services.html">Services</a>
+                <a href="index.html">Home</a>
+                <a href="services.html" class="active">Services</a>
                 <a href="estimate.html">Estimate</a>
                 <a href="about.html">About</a>
-                <a href="faq.html">FAQs</a>
+                <a href="faq.html"">FAQs</a>
                 <a href="contact.html">Contact</a>
             </div>
             <div class="search-container">
@@ -62,85 +61,10 @@
         </div>
     </nav>
 
-    <div class="hero">
-        <h1>Secure Your Family's Future</h1>
-        <p>Get a free life insurance quote today and protect what matters most</p>
-        <a href="#estimate-form" class="hero-button">Get Your Free Quote</a>
-    </div>
-
-    <div class="estimate-form">
-        <h2>Get Your Free Estimate</h2>
-        <form>
-            <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="John Doe" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" placeholder="(901) 961-5315" required>
-            </div>
-
-            <div class="form-group full-width">
-                <label for="address">Address</label>
-                <input type="text" id="address" placeholder="123 Main St, City, State" required>
-            </div>
-
-            <div class="form-group">
-                <label for="dob">Date of Birth</label>
-                <input type="date" id="dob" required>
-            </div>
-
-            <div class="form-group">
-                <label for="beneficiary">Beneficiary Name</label>
-                <input type="text" id="beneficiary" placeholder="Jane Doe" required>
-            </div>
-
-            <div class="form-group">
-                <label>Tobacco Use</label>
-                <div class="radio-group">
-                    <label>
-                        <input type="radio" id="tobacco-yes" name="tobacco" value="yes">
-                        Yes
-                    </label>
-                    <label>
-                        <input type="radio" id="tobacco-no" name="tobacco" value="no">
-                        No
-                    </label>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="coverage">Desired Coverage Amount</label>
-                <select id="coverage">
-                    <option value="100000">$100,000</option>
-                    <option value="250000">$250,000</option>
-                    <option value="500000">$500,000</option>
-                    <option value="1000000">$1,000,000</option>
-                    <option value="other">Other Amount</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="call-time">Preferred Time to Call</label>
-                <select id="call-time">
-                    <option value="morning">Morning (9AM - 12PM)</option>
-                    <option value="afternoon">Afternoon (12PM - 5PM)</option>
-                    <option value="evening">Evening (5PM - 8PM)</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="johndoe@example.com" required>
-            </div>
-
-            <button type="submit">Get My Free Quote</button>
-        </form>
-    </div>
+    
 
     <div class="benefits">
-        <h2>Why Choose Life Insurance?</h2>
+        <h2>Why Choose Faith & Family Insurance?</h2>
         <div class="benefits-grid">
             <div class="benefit-card">
                 <div class="benefit-icon">
@@ -199,6 +123,37 @@
         </div>
     </div>
 
+    <div class="faq-container"></div>
+        <div class="faq-intro">
+            <h1>Services we offer</h1>
+            <p>We offer a wide range of services to meet your insurance needs. Our services include:</p>
+        </div>
+
+        <div class="faq-section">
+            <h2>Life Insurance</h2>
+            <div class="faq-item">
+                <div class="faq-question">Term Life Insurance</div>
+                <div class="faq-answer">
+                    Term life insurance provides coverage for a specific term (e.g., 10, 20, or 30 years). It is a cost-effective way to provide financial protection for your loved ones.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Whole Life Insurance</div>
+                <div class="faq-answer">
+                    Whole life insurance provides lifelong coverage with a cash value component. It is a permanent policy that can be passed down to future generations.
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="section-divider"></div>
+
+        <div class="faq-conclusion">
+            <p>We're here to help you make informed decisions about your life insurance needs.</p>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-content">
             <div class="footer-section">
@@ -244,24 +199,10 @@
         function toggleMenu() {
             document.querySelector('.nav-links').classList.toggle('active');
             document.querySelector('.search-container').classList.toggle('active');
-            
-            // Optional: Animate hamburger to X
             const hamburger = document.querySelector('.hamburger');
             hamburger.classList.toggle('active');
-            
-            // Optional: Prevent scrolling when menu is open
             document.body.classList.toggle('menu-open');
         }
-
-        // Add scroll effect to navbar
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        });
     </script>
 </body>
 </html> 
