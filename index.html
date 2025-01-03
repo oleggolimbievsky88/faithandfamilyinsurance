@@ -4,25 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faith & Family Insurance - Life Insurance Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Dancing+Script:wght@400;500&family=Playfair+Display:wght@400;500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
     <div class="top-bar">
         <div class="top-bar-content">
-            <div class="contact-info">
+            <div class="contact-info-left">
                 <a href="tel:9019615315">
                     <i class="fas fa-phone"></i> (901) 961-5315
                 </a>
+            </div>
+            <div class="contact-info-right">
                 <a href="mailto:info@faithandfamilyinsurance.com">
                     <i class="fas fa-envelope"></i> info@faithandfamilyinsurance.com
                 </a>
-            </div>
-            <div class="social-links">
-                <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
     </div>
@@ -32,7 +37,7 @@
             <div>
                 <a href="index.html"><img src="./logo_white.png" alt="" width="100px"></div></a>
             <div class="logo-text">
-                Faith & Family<br>Insurance
+                Faith & Family<br> Insurance
             </div>
         </div>
         <p>Protecting Your Family's Future with Faith-Based Values</p>
@@ -52,7 +57,7 @@
                 <a href="index.html" class="active">Home</a>
                 <a href="services.html">Services</a>
                 <a href="estimate.html">Estimate</a>
-                <a href="about.html">About</a>
+                <a href="about.html">About Us</a>
                 <a href="faq.html">FAQs</a>
                 <a href="contact.html">Contact</a>
             </div>
@@ -72,32 +77,32 @@
         <h2>Get Your Free Estimate</h2>
         <form>
             <div class="form-group">
-                <label for="name">Full Name</label>
+                <label for="name">Full Name <span style="color:red">*</span></label>
                 <input type="text" id="name" placeholder="John Doe" required>
             </div>
             
             <div class="form-group">
-                <label for="phone">Phone Number</label>
+                <label for="phone">Phone Number <span style="color:red">*</span></label>
                 <input type="tel" id="phone" placeholder="(901) 961-5315" required>
             </div>
 
             <div class="form-group full-width">
-                <label for="address">Address</label>
+                <label for="address">Address <span style="color:red">*</span></label>
                 <input type="text" id="address" placeholder="123 Main St, City, State" required>
             </div>
 
             <div class="form-group">
-                <label for="dob">Date of Birth</label>
+                <label for="dob">Date of Birth <span style="color:red">*</span></label>
                 <input type="date" id="dob" required>
             </div>
 
             <div class="form-group">
-                <label for="beneficiary">Beneficiary Name</label>
+                <label for="beneficiary">Beneficiary Name <span style="color:red">*</span></label>
                 <input type="text" id="beneficiary" placeholder="Jane Doe" required>
             </div>
 
             <div class="form-group">
-                <label>Tobacco Use</label>
+                <label>Tobacco Use <span style="color:red">*</span></label>
                 <div class="radio-group">
                     <label>
                         <input type="radio" id="tobacco-yes" name="tobacco" value="yes">
@@ -111,7 +116,7 @@
             </div>
 
             <div class="form-group">
-                <label for="coverage">Desired Coverage Amount</label>
+                <label for="coverage">Desired Coverage Amount <span style="color:red">*</span></label>
                 <select id="coverage">
                     <option value="100000">$100,000</option>
                     <option value="250000">$250,000</option>
@@ -122,7 +127,7 @@
             </div>
 
             <div class="form-group">
-                <label for="call-time">Preferred Time to Call</label>
+                <label for="call-time">Preferred Time to Call <span style="color:red">*</span></label>
                 <select id="call-time">
                     <option value="morning">Morning (9AM - 12PM)</option>
                     <option value="afternoon">Afternoon (12PM - 5PM)</option>
@@ -131,8 +136,18 @@
             </div>
 
             <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email">Email <span style="color:red">*</span></label>
                 <input type="email" id="email" placeholder="johndoe@example.com" required>
+            </div>
+            <!-- Additional Details / Health Info -->
+            <div class="form-group full-width">
+                <label for="additional-details">Additional Details / Health Info</label>
+                <textarea 
+                    id="additional-details" 
+                    name="additional-details"
+                    placeholder="Please share any relevant health conditions or additional details that may help us provide a more accurate quote..."
+                    rows="4"
+                ></textarea>
             </div>
 
             <button type="submit">Get My Free Quote</button>

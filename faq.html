@@ -1,243 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAQs - Faith & Family Insurance</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Dancing+Script:wght@400;500&family=Playfair+Display:wght@400;500&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <div class="top-bar">
-        <div class="top-bar-content">
-            <div class="contact-info">
-                <a href="tel:9019615315">
-                    <i class="fas fa-phone"></i> (901) 961-5315
-                </a>
-                <a href="mailto:info@faithandfamilyinsurance.com">
-                    <i class="fas fa-envelope"></i> info@faithandfamilyinsurance.com
-                </a>
-            </div>
-            <div class="social-links">
-                <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-            </div>
+      <div class="top-bar-content">
+        <div class="contact-info-left">
+          <a href="tel:9019615315">
+            <i class="fas fa-phone"></i> (901) 961-5315
+          </a>
         </div>
+        <div class="contact-info-right">
+          <a href="mailto:info@faithandfamilyinsurance.com">
+            <i class="fas fa-envelope"></i> info@faithandfamilyinsurance.com
+          </a>
+          <div class="social-links">
+            <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <header>
-        <div class="logo-container">
-            <div><img src="./logo_white.png" alt="" width="100px"></div>
-            <div class="logo-text">
-                Faith & Family<br>Insurance
-            </div>
+      <div class="logo-container">
+        <div>
+          <a href="index.html"
+            ><img src="./logo_white.png" alt="" width="100px"
+          /></a>
         </div>
-        <p>Protecting Your Family's Future with Faith-Based Values</p>
+        <div class="logo-text">
+          Faith & Family<br />
+          Insurance
+        </div>
+      </div>
+      <p>Protecting Your Family's Future with Faith-Based Values</p>
     </header>
 
     <nav>
-        <div class="nav-container">
-            <div style="display: flex; align-items: center;">
-                <div class="hamburger" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="mobile-logo">Faith & Family Insurance</div>
-            </div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="estimate.html">Estimate</a>
-                <a href="about.html">About</a>
-                <a href="faq.html" class="active">FAQs</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <div class="search-container">
-                <input type="search" placeholder="Search...">
-            </div>
+      <div class="nav-container">
+        <div style="display: flex; align-items: center">
+          <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="mobile-logo">Faith & Family Insurance</div>
         </div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="estimate.html">Estimate</a>
+          <a href="about.html">About Us</a>
+          <a href="faq.html" class="active">FAQs</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="search-container">
+          <input type="search" placeholder="Search..." />
+        </div>
+      </div>
     </nav>
 
     <div class="faq-container">
-        <div class="faq-intro">
-            <h1>Life Insurance FAQs</h1>
-            <p>Welcome to our Frequently Asked Questions (FAQ) page! We're here to provide clear and concise answers to your life insurance questions.</p>
-        </div>
+      <div class="faq-intro">
+        <h1>Life Insurance FAQs</h1>
+        <p>
+          Welcome to our Frequently Asked Questions (FAQ) page! We're here to
+          provide clear and concise answers to your life insurance questions.
+        </p>
+      </div>
 
-        <div class="faq-section">
-            <h2>General Questions</h2>
-            <div class="faq-item">
-                <div class="faq-question">What is life insurance?</div>
-                <div class="faq-answer">
-                    Life insurance is a contract between you and an insurance company. In exchange for premium payments, the insurer provides a lump-sum payment, known as a death benefit, to your beneficiaries in the event of your passing.
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Why do I need life insurance?</div>
-                <div class="faq-answer">
-                    Life insurance provides financial security for your loved ones. It can help cover expenses like funeral costs, debts, or ongoing living expenses, ensuring that your family is protected.
-                </div>
-            </div>
+      <div class="faq-section">
+        <h2>General Questions</h2>
+        <div class="faq-item">
+          <div class="faq-question">What is life insurance?</div>
+          <div class="faq-answer">
+            Life insurance is a contract between you and an insurance company.
+            In exchange for premium payments, the insurer provides a lump-sum
+            payment, known as a death benefit, to your beneficiaries in the
+            event of your passing.
+          </div>
         </div>
-
-        <div class="faq-section">
-            <h2>Policy Types</h2>
-            <div class="faq-item">
-                <div class="faq-question">What types of life insurance are available?</div>
-                <div class="faq-answer">
-                    We offer the following types of life insurance:
-                    <ul>
-                        <li>Term Life Insurance: Provides coverage for a specific term (e.g., 10, 20, or 30 years).</li>
-                        <li>Whole Life Insurance: Offers lifelong coverage with a cash value component.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">What is the difference between term and whole life insurance?</div>
-                <div class="faq-answer">
-                    <ul>
-                        <li>Term Life Insurance: Temporary coverage for a set period. More affordable but no cash value.</li>
-                        <li>Whole Life Insurance: Permanent coverage with a savings component, which grows over time.</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="faq-item">
+          <div class="faq-question">Why do I need life insurance?</div>
+          <div class="faq-answer">
+            Life insurance provides financial security for your loved ones. It
+            can help cover expenses like funeral costs, debts, or ongoing living
+            expenses, ensuring that your family is protected.
+          </div>
         </div>
+      </div>
 
-        <div class="faq-section">
-            <h2>Coverage and Benefits</h2>
-            <div class="faq-item">
-                <div class="faq-question">How much life insurance coverage do I need?</div>
-                <div class="faq-answer">
-                    The amount depends on your financial situation, including income, debts, living expenses, and future needs. A general rule of thumb is to have coverage worth 10-12 times your annual income.
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Who can I name as a beneficiary?</div>
-                <div class="faq-answer">
-                    You can name any individual(s), trust, or entity as your beneficiary. Common choices include spouses, children, or charities.
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Can I change my beneficiaries?</div>
-                <div class="faq-answer">
-                    Yes, you can update your beneficiaries at any time by contacting us.
-                </div>
-            </div>
+      <div class="faq-section">
+        <h2>Policy Types</h2>
+        <div class="faq-item">
+          <div class="faq-question">
+            What types of life insurance are available?
+          </div>
+          <div class="faq-answer">
+            We offer the following types of life insurance:
+            <ul>
+              <li>
+                Term Life Insurance: Provides coverage for a specific term
+                (e.g., 10, 20, or 30 years).
+              </li>
+              <li>
+                Whole Life Insurance: Offers lifelong coverage with a cash value
+                component.
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <div class="faq-section">
-            <h2>Payments and Premiums</h2>
-            <div class="faq-item">
-                <div class="faq-question">How are premiums calculated?</div>
-                <div class="faq-answer">
-                    Premiums are based on factors such as age, health, lifestyle, and the type and amount of coverage you choose.
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">What happens if I miss a premium payment?</div>
-                <div class="faq-answer">
-                    If you miss a payment, there is usually a grace period during which you can pay without losing coverage. However, it's important to pay on time to avoid policy cancellation.
-                </div>
-            </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            What is the difference between term and whole life insurance?
+          </div>
+          <div class="faq-answer">
+            <ul>
+              <li>
+                Term Life Insurance: Temporary coverage for a set period. More
+                affordable but no cash value.
+              </li>
+              <li>
+                Whole Life Insurance: Permanent coverage with a savings
+                component, which grows over time.
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
 
-        <div class="faq-section">
-            <h2>Claims Process</h2>
-            <div class="faq-item">
-                <div class="faq-question">How do my beneficiaries file a claim?</div>
-                <div class="faq-answer">
-                    Beneficiaries can file a claim by contacting our customer service team and submitting the required documentation, including a copy of the death certificate.
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">How long does it take to process a claim?</div>
-                <div class="faq-answer">
-                    Claims are typically processed within 30 days after receiving all necessary documents.
-                </div>
-            </div>
+      <div class="faq-section">
+        <h2>Coverage and Benefits</h2>
+        <div class="faq-item">
+          <div class="faq-question">
+            How much life insurance coverage do I need?
+          </div>
+          <div class="faq-answer">
+            The amount depends on your financial situation, including income,
+            debts, living expenses, and future needs. A general rule of thumb is
+            to have coverage worth 10-12 times your annual income.
+          </div>
         </div>
-
-        <div class="faq-section">
-            <h2>Additional Information</h2>
-            <div class="faq-item">
-                <div class="faq-question">Can I cancel my policy?</div>
-                <div class="faq-answer">
-                    Yes, you can cancel your policy at any time. For permanent policies, you may receive the cash surrender value.
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">What is a rider?</div>
-                <div class="faq-answer">
-                    A rider is an add-on to your policy that provides additional benefits, such as accidental death coverage or waiver of premium in case of disability.
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Is life insurance taxable?</div>
-                <div class="faq-answer">
-                    Generally, the death benefit is not subject to income tax. However, there may be exceptions, so it's best to consult a tax advisor.
-                </div>
-            </div>
+        <div class="faq-item">
+          <div class="faq-question">Who can I name as a beneficiary?</div>
+          <div class="faq-answer">
+            You can name any individual(s), trust, or entity as your
+            beneficiary. Common choices include spouses, children, or charities.
+          </div>
         </div>
-
-        <div class="section-divider"></div>
-
-        <div class="faq-conclusion">
-            <p>We're here to help you make informed decisions about your life insurance needs.</p>
+        <div class="faq-item">
+          <div class="faq-question">Can I change my beneficiaries?</div>
+          <div class="faq-answer">
+            Yes, you can update your beneficiaries at any time by contacting us.
+          </div>
         </div>
+      </div>
+
+      <div class="faq-section">
+        <h2>Payments and Premiums</h2>
+        <div class="faq-item">
+          <div class="faq-question">How are premiums calculated?</div>
+          <div class="faq-answer">
+            Premiums are based on factors such as age, health, lifestyle, and
+            the type and amount of coverage you choose.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            What happens if I miss a premium payment?
+          </div>
+          <div class="faq-answer">
+            If you miss a payment, there is usually a grace period during which
+            you can pay without losing coverage. However, it's important to pay
+            on time to avoid policy cancellation.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-section">
+        <h2>Claims Process</h2>
+        <div class="faq-item">
+          <div class="faq-question">How do my beneficiaries file a claim?</div>
+          <div class="faq-answer">
+            Beneficiaries can file a claim by contacting our customer service
+            team and submitting the required documentation, including a copy of
+            the death certificate.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            How long does it take to process a claim?
+          </div>
+          <div class="faq-answer">
+            Claims are typically processed within 30 days after receiving all
+            necessary documents.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-section">
+        <h2>Additional Information</h2>
+        <div class="faq-item">
+          <div class="faq-question">Can I cancel my policy?</div>
+          <div class="faq-answer">
+            Yes, you can cancel your policy at any time. For permanent policies,
+            you may receive the cash surrender value.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What is a rider?</div>
+          <div class="faq-answer">
+            A rider is an add-on to your policy that provides additional
+            benefits, such as accidental death coverage or waiver of premium in
+            case of disability.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Is life insurance taxable?</div>
+          <div class="faq-answer">
+            Generally, the death benefit is not subject to income tax. However,
+            there may be exceptions, so it's best to consult a tax advisor.
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="faq-conclusion">
+        <p>
+          We're here to help you make informed decisions about your life
+          insurance needs.
+        </p>
+      </div>
     </div>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <img src="./logo_white.png" alt="Faith & Family Insurance" width="80px">
-                <h3>Faith & Family Insurance</h3>
-                <p>Protecting Your Family's Future with Faith-Based Values</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="estimate.html">Get a Quote</a></li>
-                    <li><a href="faq.html">FAQs</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <ul>
-                    <li><i class="fas fa-phone"></i> (901) 961-5315</li>
-                    <li><i class="fas fa-envelope"></i> info@faithandfamilyinsurance.com</li>
-                    <li><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 5:00 PM</li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
+      <div class="footer-content">
+        <div class="footer-section">
+          <img
+            src="./logo_white.png"
+            alt="Faith & Family Insurance"
+            width="80px"
+          />
+          <h3>Faith & Family Insurance</h3>
+          <p>Protecting Your Family's Future with Faith-Based Values</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Faith & Family Insurance. OG Web Services, LLC. All rights reserved.</p>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="estimate.html">Get a Quote</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
         </div>
+
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-phone"></i> (901) 961-5315</li>
+            <li>
+              <i class="fas fa-envelope"></i> info@faithandfamilyinsurance.com
+            </li>
+            <li><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 5:00 PM</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 Faith & Family Insurance. OG Web Services, LLC. All rights
+          reserved.
+        </p>
+      </div>
     </footer>
 
     <script>
-        function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('active');
-            document.querySelector('.search-container').classList.toggle('active');
-            const hamburger = document.querySelector('.hamburger');
-            hamburger.classList.toggle('active');
-            document.body.classList.toggle('menu-open');
-        }
+      function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("active");
+        document.querySelector(".search-container").classList.toggle("active");
+        const hamburger = document.querySelector(".hamburger");
+        hamburger.classList.toggle("active");
+        document.body.classList.toggle("menu-open");
+      }
     </script>
-</body>
-</html> 
+  </body>
+</html>
