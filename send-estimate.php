@@ -38,7 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // Send email
     if (mail($to_email, $subject, $message, $headers)) {
-        echo json_encode(['success' => true]);
+        header("Location: confirmation.html"); // Redirect to confirmation page
+        exit;
     } else {
         echo json_encode(['success' => false, 'message' => 'Failed to send email']);
     }

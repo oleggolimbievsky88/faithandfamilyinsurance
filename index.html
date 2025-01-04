@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Dancing+Script:wght@400;500&family=Playfair+Display:wght@400;500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     
 </head>
 <body>
@@ -75,7 +75,7 @@
 
     <div class="estimate-form">
         <h2>Get Your Free Estimate</h2>
-        <form>
+        <form id="estimateForm" onsubmit="return handleSubmit(event)">
             <div class="form-group">
                 <label for="name">Full Name <span style="color:red">*</span></label>
                 <input type="text" id="name" placeholder="John Doe" required>
@@ -277,6 +277,87 @@
                 nav.classList.remove('scrolled');
             }
         });
+
+        // submit form
+        const handleSubmit = (event) => {
+        event.preventDefault();
+
+        // Reset all error states
+        const inputs = document.querySelectorAll("input, select");
+        inputs.forEach((input) => {
+          input.classList.remove("error");
+          const errorMessage =
+            input.parentElement.querySelector(".error-message");
+          if (errorMessage) {
+            errorMessage.classList.remove("visible");
+          }
+        });
+
+        // Check all required fields
+        let isValid = true;
+        inputs.forEach((input) => {
+          if (input.hasAttribute("required") && !input.value) {
+            isValid = false;
+            input.classList.add("error");
+
+            // Create error message if it doesn't exist
+            let errorMessage =
+              input.parentElement.querySelector(".error-message");
+            if (!errorMessage) {
+              errorMessage = document.createElement("div");
+              errorMessage.className = "error-message";
+              errorMessage.textContent = "This field is required";
+              input.parentElement.appendChild(errorMessage);
+            }
+            errorMessage.classList.add("visible");
+          }
+
+          // Special check for radio buttons
+          if (input.type === "radio" && input.name === "tobacco") {
+            const radioGroup = document.getElementsByName("tobacco");
+            const checked = Array.from(radioGroup).some(
+              (radio) => radio.checked
+            );
+            if (!checked) {
+              isValid = false;
+              const radioContainer = document.querySelector(".radio-group");
+              radioContainer.classList.add("error");
+
+              let errorMessage =
+                radioContainer.parentElement.querySelector(".error-message");
+              if (!errorMessage) {
+                errorMessage = document.createElement("div");
+                errorMessage.className = "error-message";
+                errorMessage.textContent = "Please select an option";
+                radioContainer.parentElement.appendChild(errorMessage);
+              }
+              errorMessage.classList.add("visible");
+            }
+          }
+        });
+
+        if (isValid) {
+          // Store form data if needed (e.g., in localStorage or send to server)
+          window.location.href = "confirmation.html";
+        }
+
+        return false;
+      };
+
+      // Add error message elements to all required fields
+      document.addEventListener("DOMContentLoaded", () => {
+        const inputs = document.querySelectorAll(
+          "input[required], select[required]"
+        );
+        inputs.forEach((input) => {
+          if (!input.parentElement.querySelector(".error-message")) {
+            const errorMessage = document.createElement("div");
+            errorMessage.className = "error-message";
+            errorMessage.textContent = "This field is required";
+            input.parentElement.appendChild(errorMessage);
+          }
+        });
+      });
     </script>
 </body>
 </html> 
