@@ -238,7 +238,7 @@
         }
       });
 
-      const handleSubmit = (event) => {
+      const handleSubmit = async (event) => {
         event.preventDefault();
 
         // Reset all error states
@@ -296,8 +296,27 @@
         });
 
         if (isValid) {
-          // Store form data if needed (e.g., in localStorage or send to server)
-          window.location.href = "confirmation.html";
+          // Collect form data
+          const formData = new FormData(
+            document.getElementById("estimateForm")
+          );
+
+          try {
+            // Send data to server
+            const response = await fetch("send-estimate.php", {
+              method: "POST",
+              body: formData,
+            });
+
+            const result = await response.json();
+            if (result.success) {
+              window.location.href = "confirmation.html";
+            } else {
+              alert("Error: " + result.message);
+            }
+          } catch (error) {
+            console.error("Fetch error:", error);
+          }
         }
 
         return false;
