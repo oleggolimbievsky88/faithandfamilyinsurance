@@ -1,4 +1,9 @@
 <?php
+require 'vendor/autoload.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
@@ -53,30 +58,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // Email details
-    $to_email = "info@faithandfamilyinsurance.com";
-    $subject = "New Insurance Estimate Request from $name";
-    $message = "New Insurance Estimate Request:\n\n";
-    $message .= "Name: $name\n";
-    $message .= "Phone: $phone\n";
-    $message .= "Address: $address\n";
-    $message .= "Date of Birth: $dob\n";
-    $message .= "Beneficiary: $beneficiary\n";
-    $message .= "Tobacco Use: $tobacco\n";
-    $message .= "Coverage Amount: $$coverage\n";
-    $message .= "Preferred Call Time: $call_time\n";
-    $message .= "Email: $email\n";
-    $message .= "Additional Details: $additional_details\n";
+    // Create a new PHPMailer instance
+    $mail = new PHPMailer(true);
 
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "X-Mailer: PHP/" . phpversion();
+    try {
+        // Server settings
+        $mail->isSMTP();
+        $mail->Host = 'smtp.example.com'; // Set the SMTP server to send through
+        $mail->SMTPAuth = true;
+        $mail->Username = 'your-email@example.com'; // SMTP username
+        $mail->Password = 'your-email-password'; // SMTP password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
 
-    // Send email
-    if (mail($to_email, $subject, $message, $headers)) {
+        // Recipients
+        $mail->setFrom('your-email@example.com', 'Faith & Family Insurance');
+        $mail->addAddress('info@faithandfamilyinsurance.com', 'Insurance Team');
+
+        // Content
+        $mail->isHTML(true);
+        $mail->Subject = "New Insurance Estimate Request from $name";
+        $mail->Body    = "Name: $name<br>Email: $email<br>..."; // Add other fields
+
+        $mail->send();
         echo json_encode(['success' => true]);
-    } else {
-        echo json_encode(['success' => false, 'message' => 'Failed to send email']);
+    } catch (Exception $e) {
+        echo json_encode(['success' => false, 'message' => "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"]);
     }
     exit;
 }
