@@ -64,15 +64,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Server settings
         $mail->isSMTP();
-        $mail->Host = 'smtp.example.com'; // Set the SMTP server to send through
+        $mail->Host = 'smtp.ionos.com'; // Set the SMTP server to send through
         $mail->SMTPAuth = true;
-        $mail->Username = 'your-email@example.com'; // SMTP username
-        $mail->Password = 'your-email-password'; // SMTP password
+        $mail->Username = 'info@faithandfamily.com'; // SMTP username
+        $mail->Password = 'M0nsterX2011!'; // SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
         // Recipients
-        $mail->setFrom('your-email@example.com', 'Faith & Family Insurance');
+        $mail->setFrom('info@faithandfamilyinsurance.com', 'Faith & Family Insurance');
         $mail->addAddress('info@faithandfamilyinsurance.com', 'Insurance Team');
 
         // Content
@@ -83,6 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->send();
         echo json_encode(['success' => true]);
     } catch (Exception $e) {
+        error_log("Mailer Error: {$mail->ErrorInfo}");
         echo json_encode(['success' => false, 'message' => "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"]);
     }
     exit;
