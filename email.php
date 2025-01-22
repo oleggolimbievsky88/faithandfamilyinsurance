@@ -11,14 +11,14 @@
        $mail->isSMTP();
        $mail->Host = 'smtp.ionos.com';
        $mail->SMTPAuth = true;
-       $mail->Username = 'info@faithandfamily.com'; // Your Ionos email
+       $mail->Username = 'info@faithandfamilyinsurance.com'; // Your Ionos email
        $mail->Password = 'M0nsterX2011!'; // Your Ionos email password
        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Use TLS
        $mail->Port = 587;
 
        //Recipients
-       $mail->setFrom('info@faithandfamily.com', 'Faith & Family Insurance');
-       $mail->addAddress('info@faithandfamily.com', 'Insurance Team');
+       $mail->setFrom('info@faithandfamilyinsurance.com', 'Faith & Family Insurance');
+       $mail->addAddress('info@faithandfamilyinsurance.com', 'Insurance Team');
 
        // Content
        $mail->isHTML(true);

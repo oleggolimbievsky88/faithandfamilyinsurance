@@ -338,7 +338,7 @@
 
                 try {
                     // Send data to server
-                    const response = await fetch('./send-estimate.php', {
+                    const response = await fetch('http://localhost:8000/send-estimate.php', {
                         method: 'POST',
                         body: formData
                     });

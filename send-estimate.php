@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.ionos.com'; // Set the SMTP server to send through
         $mail->SMTPAuth = true;
-        $mail->Username = 'info@faithandfamily.com'; // SMTP username
+        $mail->Username = 'info@faithandfamilyinsurance.com'; // SMTP username
         $mail->Password = 'M0nsterX2011!'; // SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Enable TLS encryption
         $mail->Port = 587; // TCP port to connect to
