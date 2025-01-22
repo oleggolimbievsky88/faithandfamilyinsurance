@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require 'vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -7,6 +11,7 @@ use PHPMailer\PHPMailer\Exception;
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect form data
@@ -68,8 +73,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->SMTPAuth = true;
         $mail->Username = 'info@faithandfamily.com'; // SMTP username
         $mail->Password = 'M0nsterX2011!'; // SMTP password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = 587;
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Enable TLS encryption
+        $mail->Port = 587; // TCP port to connect to
 
         // Recipients
         $mail->setFrom('info@faithandfamilyinsurance.com', 'Faith & Family Insurance');
