@@ -1,0 +1,39 @@
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+  display: none; /* Hide by default */
+}
+
+.error-message.visible {
+  display: block; /* Show when visible class is added */
+}
+
+header {
+  background-image: url("./images/your-image.jpg"); /* Path to your image */
+  background-size: cover; /* Cover the entire header */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  position: relative; /* Position relative for overlay */
+  color: white; /* Text color */
+  padding: 1rem;
+  text-align: center;
+  z-index: 1; /* Ensure content is above the overlay */
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 0; /* Place the overlay below the content */
+}
+
+header .logo-container,
+header p {
+  position: relative; /* Ensure text is above the overlay */
+  z-index: 1;
+}

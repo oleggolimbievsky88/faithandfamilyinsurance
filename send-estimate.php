@@ -11,7 +11,7 @@ use PHPMailer\PHPMailer\Exception;
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
-
+header('Content-Type: application/json'); // Ensure JSON response
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect form data
@@ -83,13 +83,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Content
         $mail->isHTML(true);
         $mail->Subject = "New Insurance Estimate Request from $name";
-        $mail->Body    = "Name: $name<br>Email: $email<br>..."; // Add other fields
+        $mail->Body    = "Test Estimate"; // Add other fields
 
         $mail->send();
         echo json_encode(['success' => true]);
     } catch (Exception $e) {
         error_log("Mailer Error: {$mail->ErrorInfo}");
         echo json_encode(['success' => false, 'message' => "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"]);
+    } catch (\Exception $e) {
+        error_log("General Error: {$e->getMessage()}");
+        echo json_encode(['success' => false, 'message' => "An unexpected error occurred."]);
     }
     exit;
 }
